@@ -7,7 +7,7 @@ const sum = require('./sum');
 
 router.get('/add/:a/:b', (ctx, next) => {
   const result = sum(parseFloat(ctx.params.a), parseFloat(ctx.params.b));
-  return ctx.body = { result };  
+  return ctx.body = { result };
 });
 
 app
