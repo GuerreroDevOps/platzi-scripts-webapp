@@ -41,7 +41,7 @@ pipeline {
         branch 'main'
       }
       steps {
-        build job: 'deploy-webapp-staging', parameters: [string(name: 'ARTIFACT_ID', value: "${env.ARTIFACT_ID}")], propagate: true, wait: false
+        build job: 'deploy-webapp-staging', parameters: [string(name: 'ARTIFACT_ID', value: "${env.ARTIFACT_ID}")], propagate: true, wait: true
       }
     }
   }
